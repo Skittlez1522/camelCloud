@@ -7,6 +7,13 @@
     <title>camelCloud</title>
 </head>
 <body>
-    <p>test</p>
+    <form action="/permits/building" method="POST">
+        <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email address</label>
+            <input type="text" class="form-control" id="signupEmail" aria-describedby="emailHelp" name="info">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </body>
+<script src="vendor/web3/dist/web3.min.js"></script>
 </html>

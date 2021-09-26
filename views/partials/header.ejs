@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camelCloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="row sidenav-row">
+
+        <div class="col-2">
+            <div class="sidenav">
+
+                <div class="flex-shrink-0 p-3 bg-white">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                        <img src="/imgs/camelCloud.svg" alt="camelCloud-logo" height="50" width="50" />
+                        <span class="ms-2 fs-5 fw-semibold">camelCloud</span>
+                    </a>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-1">
+                        <button class="btn btn-toggle-one align-items-center rounded collapsed " aria-expanded="true" href="/dashboard" >
+                            Dashboard
+                        </button>
+                        </li>
+                        <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#utilities-collapse" aria-expanded="false">
+                            Utilities & Services
+                        </button>
+                        <div class="collapse" id="utilities-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Damages</a></li>
+                            <li><a href="#" class="link-dark rounded">Issues</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#permits-collapse" aria-expanded="false">
+                            Permits
+                        </button>
+                        <div class="collapse" id="permits-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Building Permits</a></li>
+                            <li><a href="#" class="link-dark rounded">Mobile Home Permits</a></li>
+                            <li><a href="#" class="link-dark rounded">Demolition Permits</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                        <li class="border-top my-3"></li>
+                        <li class="mb-1">
+                        <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                            Account
+                        </button>
+                        <div class="collapse" id="account-collapse">
+                            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            <li><a href="#" class="link-dark rounded">Profile</a></li>
+                            <li><a href="#" class="link-dark rounded">Settings</a></li>
+                            <li><a href="/logout" class="link-dark rounded">Sign out</a></li>
+                            </ul>
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    

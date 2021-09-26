@@ -1,0 +1,290 @@
+<%- include("partials/header1") -%>
+
+<form action="/permits/building" method="POST">
+<div class="container">
+<div class="row mt-3 ms-4 me-4">
+    <h2>Building Permit Application</h2>
+    <div class="col-6">
+        <div class="mb-4">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" name="name">
+        </div>
+    </div>
+
+    <div class="col-6 mb-4">
+        <label for="date" class="form-label">Date</label>
+        <div class="row" id="date">
+            <div class="col-5">
+                <select class="form-select" aria-label="Default select example" name="month">
+                    <option selected>Month</option>
+                    <option value="1">January</option>
+                    <option value="2">Febuary</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+
+            <div class="col-3">
+                <select class="form-select" aria-label="Default select example" name="day">
+                    <option selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+            </div>
+
+            <div class="col-4">
+                <select class="form-select" aria-label="Default select example" name="year">
+                    <option selected>Year</option>
+                    <option value="1">2021</option>
+                    <option value="2">2022</option>
+                    <option value="3">2023</option>
+                    <option value="4">2024</option>
+                    <option value="5">2025</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="mb-4">
+            <label for="propOwner" class="form-label">Property Owner</label>
+            <input type="text" class="form-control" id="propOwner" placeholder="John Doe" name="propOwner">
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="mb-4">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="(123) 456 7890" name="phoneNumber">
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="mb-4">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="123 Main St, Laramie, WY, 82071" name="address">
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <h3>Purpose:</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="purposeConstruct" name="purposeConstruct">
+                <label class="form-check-label" for="purposeConstruct">
+                Construct
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="install" id="purposeInstall" name="purposeInstall">
+                <label class="form-check-label" for="purposeInstall">
+                Install
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="repair" id="purposeRepair" name="purposeRepair">
+                <label class="form-check-label" for="purposeRepair">
+                Repair
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="altar" id="purposeAlter" name="purposeAlter">
+                <label class="form-check-label" for="purposeAlter">
+                    Alter
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="situate" id="purposeSituate" name="purposeSituate">
+                <label class="form-check-label" for="purposeSituate">
+                Situate
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="other" id="purposeOther" name="purposeOther">
+                <label class="form-check-label" for="purposeOther">
+                Other
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <h3>Type:</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="typeResidential" id="typeResidential">
+                <label class="form-check-label" for="typeResidential">
+                    Resedential
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="typeCommercial" id="typeCommercial">
+                <label class="form-check-label" for="typeCommercial">
+                    Commercial
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="typeIndustrial" id="typeIndustrial">
+                <label class="form-check-label" for="typeIndustrial">
+                    Industrial
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <h3>Structure:</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureHome" id="structureHome">
+                <label class="form-check-label" for="structureHome">
+                    Home
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureGarage" id="structureGarage">
+                <label class="form-check-label" for="structureGarage">
+                    Garage
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureAddition" id="structureAddition">
+                <label class="form-check-label" for="structureAddition">
+                    Addition
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureShed" id="structureShed">
+                <label class="form-check-label" for="structureShed">
+                    Shed
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureCarport" id="structureCarport">
+                <label class="form-check-label" for="structureCarport">
+                    Carport
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="structureDeck" id="structureDeck">
+                <label class="form-check-label" for="structureDeck">
+                    Deck
+                </label>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>Location of Construction:</h3>
+    <div class="col-5">
+        <div class="mb-4">
+            <label for="constructionStreetAddress" class="form-label">Street Address</label>
+            <input type="text" class="form-control" id="constructionStreetAddress" placeholder="123 Main St" name="propOwner" name="constructionStreetAddress">
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <label for="constructionBlocks" class="form-label">Block</label>
+            <input type="number" class="form-control" id="constructionBlocks" placeholder="12" name="propOwner" name="constructionBlocks">
+        </div>
+    </div>
+
+    <div class="col-3">
+        <div class="mb-4">
+            <label for="constructionLots" class="form-label">Lot</label>
+            <input type="number" class="form-control" id="constructionLots" placeholder="23" name="propOwner" name="constructionLots">
+        </div>
+    </div>
+
+    <h3>Builder Information</h3>
+    <div class="col-4">
+        <div class="mb-4">
+            <label for="builderName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="builderName" placeholder="John Doe" name="propOwner" name="builderName">
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <label for="builderAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="builderAddress" placeholder="123 Main St, Laramie, WY, 82071" name="propOwner" name="builderAddress">
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="mb-4">
+            <label for="builderPhone" class="form-label">Phone #</label>
+            <input type="text" class="form-control" id="builderPhone" placeholder="(123) 456 7890" name="propOwner" name="builderPhone">
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="mb-4">
+            <label for="estimatedCost" class="form-label">Estimated Cost of Project</label>
+            <input type="text" class="form-control" id="estimatedCost" placeholder="$32,000" name="propOwner" name="estimatedCost">
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="mb-4">
+            <label for="squareFootage" class="form-label">Square footage of building being constructed</label>
+            <input type="text" class="form-control" id="squareFootage" placeholder="2,300 sq. ft." name="propOwner" name="squareFootage">
+        </div>
+    </div>
+
+    <div class="col-11">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" name="tos" id="tos">
+            <label class="form-check-label" for="tos">
+              By clicking this checkbox, you agree to the Terms of Service
+            </label>
+        </div>
+    </div>
+
+    <div class="col-1">
+        <button class="btn btn-primary float-end" type="submit">Submit</button>
+    </div>
+
+</div>
+</div>
+</form>
+
+<%- include("partials/footer") -%>
